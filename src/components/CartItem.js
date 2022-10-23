@@ -7,22 +7,24 @@ const CartItem = ({img, amount, id, price, title}) =>{
          <div className='cart-info'>
              <img src={img} />
              <div>
-               <div>{title}</div>
+               <div className='title'>{title}</div>
                <div>{'$'+price}</div>
-               <div>remove</div>
+               <div class='remove'>remove</div>
              </div>
          </div>
          <div className='cart-amount'>
              <MdOutlineKeyboardArrowUp 
                 style={{
                     width: '30px',
-                    height: '30px'
+                    height: '30px',
+                    cursor: 'pointer',
                 }}
              />
              {amount}
              <MdOutlineKeyboardArrowUp 
                style={{
                    transform: 'rotate(180deg)',
+                   cursor: 'pointer',
                    width: '30px',
                    height: '30px'
                }}

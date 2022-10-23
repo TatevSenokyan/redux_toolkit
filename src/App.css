@@ -16,13 +16,27 @@
   justify-content: space-between;
 }
 
+.footer button {
+  color: white;
+  background: #483D8B;
+  outline: none;
+  border: none;
+  width: 120px;
+  height: 40px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .navbar-container p {
   color: white;
   font-size: 30px;
 }
 
 .footer {
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin-bottom: 200px;
 }
@@ -30,6 +44,12 @@
   width: 100%;
   height: 1px;
   color: black;
+}
+
+.footer-total {
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
 }
 
 .total {
@@ -90,5 +110,16 @@ img {
   background: blue;
   color: white;
   right: 10px
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+}
+
+.remove {
+  color: #483D8B;
+  cursor: pointer;
+  font-weight: 600;
 }
 

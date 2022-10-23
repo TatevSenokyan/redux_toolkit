@@ -6,7 +6,7 @@ const Footer = () => {
       <div className = 'footer'>
         <hr></hr>
         <div className = 'total'>
-            <div>Total</div>
+            <div className = 'footer-total'>Total</div>
             <div>0</div>
         </div>
         <button>Clear basket</button>
