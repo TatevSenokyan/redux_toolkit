@@ -1,8 +1,10 @@
 import React from 'react';
 import {BiCart} from 'react-icons/bi';
+import {useSelector} from 'react-redux';
 
 
 const Navbar = ()=> {
+   const {cartCount} = useSelector(state=>state.cart);
    return(
       <div className='navbar'>
           <div className='navbar-container'>
@@ -18,7 +20,7 @@ const Navbar = ()=> {
                 }}
               />
               <div className='count'>
-                <span>0</span>
+                <span>{cartCount}</span>
               </div>
             </div>
           </div>
