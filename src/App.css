@@ -38,7 +38,6 @@
 .footer {
   width: 80%;
   margin: auto;
-  margin-bottom: 200px;
   font-weight: 700;
 }
 .footer hr {
@@ -122,5 +121,43 @@ img {
   color: #483D8B;
   cursor: pointer;
   font-weight: 600;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0
+}
+
+.modal {
+  width: 400px;
+  height: 200px;
+  background: white;
+  border-radius: 15px;
+  margin: 350px auto;
+  color: black;
+  font-weight: 700;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.modal-buttons {
+  margin-top: 30px;
+}
+
+.modal-buttons button {
+  border: none;
+  outline: none;
+  background: #483D8B;
+  color: white;
+  margin: 5px;
+  width: 120px;
+  cursor: pointer;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
