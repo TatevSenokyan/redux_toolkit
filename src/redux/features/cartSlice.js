@@ -1,17 +1,14 @@
 import {createSlice} from '@reduxjs/toolkit';
-import data from '../../assets/data';
+import products from '../../assets/data';
 
 
 const initialState = {
-  data,
-  cartCount: 4,
-  totalPrice: calcPrice(data)
+  products,
+  data: [],
+  cartCount: 0,
+  totalPrice: 0,
 };
 
-function calcPrice (data) {
-  const sum = data.reduce((aggr, item)=>aggr+=+item.price,0);
-  return sum;
-}
 
 const cartSlice = createSlice({
     name: 'carts',
@@ -46,9 +43,14 @@ const cartSlice = createSlice({
         if (state.totalPrice<0) {
           state.totalPrice = 0;
         }
+      },
+      addToCart: (state, action) => {
+        state.data = [...state.data, action.payload];
+        state.cartCount += 1;
+        state.totalPrice += +action.payload.price;
       }
     }
 });
 
-export const {clearBasket, removeItem, increaseAmount, decreaseAmount} = cartSlice.actions;
+export const {clearBasket, removeItem, increaseAmount, decreaseAmount, addToCart} = cartSlice.actions;
 export default cartSlice.reducer;

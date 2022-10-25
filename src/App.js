@@ -1,19 +1,20 @@
 
 import './App.css';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import {useSelector} from 'react-redux';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import CartContainer from './components/CartContainer';
-import Modal from './components/Modal';
+import ProductContainer from './components/ProductContainer';
 
 function App() {
-  const {open} = useSelector(state=>state.modal);
   return (
     <div className="App">
+      <BrowserRouter>
       <Navbar />
-      <CartContainer />
-      <Footer />
-      {open && <Modal />}
+        <Routes>
+            <Route  exact path='/' element={<ProductContainer />} />
+            <Route  path='carts' element={<CartContainer />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
