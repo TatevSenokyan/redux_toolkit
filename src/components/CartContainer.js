@@ -11,11 +11,11 @@ const CartContainer = () => {
   return (
     <> 
       {!carts.length && <div className='empty'>Your basket is empty</div>}
-      <div className = 'cart-container'>
+      <div className = 'cart-container' style={{height: carts.length? carts.length*150+'px': '150px'}}>
           {carts.map((cart)=><CartItem key={cart.id} {...cart} />)}
       </div>
       <Footer />
-      {open && <Modal />}
+      {open && <Modal length={carts.length}/>}
     </>
     
   );

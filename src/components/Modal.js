@@ -4,11 +4,11 @@ import {clearBasket} from '../redux/features/cartSlice';
 import {useDispatch} from 'react-redux';
 
 
-const Modal = () =>{
+const Modal = ({length}) =>{
     const dispatch = useDispatch();
     return(
-       <div className='modal-container'>
-           <div className='modal'>
+       <div className='modal-container' style={{height: length>=2?'100%': '100vh' }}>
+           <div className='modal' style={{marginTop: length>=2?'300px': '150px' }}>
               <div className='modal-text'>
                   Are you sure to delete the cart content?
               </div>
