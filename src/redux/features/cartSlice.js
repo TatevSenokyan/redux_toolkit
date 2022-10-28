@@ -31,18 +31,24 @@ const cartSlice = createSlice({
         state.totalPrice = 0;
       },
       removeItem: (state, action)=> {
+        
         const id = action.payload;
         const cart = state.data.find(cart=>cart.id==id);
         const newState = state.data.filter(cart=>cart.id!==id);
         state.data = newState;
         state.cartCount -=cart.amount;
         state.totalPrice -=+cart.price*cart.amount;
+        if (state.totalPrice<0) {
+          state.totalPrice = 0;
+        }
+        
       },
       increaseAmount: (state, action)=>{
         const id = action.payload;
         const cart = state.data.find(cart=>cart.id==id);
         state.data = state.data.map(cart=>cart.id==id?{...cart, amount: cart.amount+=1}:{...cart});
         state.cartCount += 1;
+       
         state.totalPrice +=+cart.price;
       },
       decreaseAmount: (state, action)=>{
