@@ -9,7 +9,9 @@ const Navbar = ()=> {
    return(
       <div className='navbar'>
           <div className='navbar-container'>
-             <p>Redux Toolkit</p>
+             <Link to='/'>
+              <p>Redux Toolkit</p>
+             </Link>
              <Link to='/carts'>
              <div className='basket'>
                 <BiCart 

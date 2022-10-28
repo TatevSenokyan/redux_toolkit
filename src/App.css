@@ -199,6 +199,10 @@ img {
   justify-content: center;
 }
 
+a {
+  text-decoration: none
+}
+
 .product {
   width: 250px;
   margin: 10px;
