@@ -9,7 +9,7 @@ const ProductItem = ({img, amount, id, price, title}) =>{
          <img src={img} />
          <div>{title}</div>
          <div>{'$'+price}</div>
-         <button onClick={()=>dispatch(addToCart({img, amount, id, price, title}))}>Add to cart</button>
+         <button className='add-btn' onClick={()=>dispatch(addToCart({img, amount, id, price, title}))}>Add to cart</button>
 
      </div>
    )

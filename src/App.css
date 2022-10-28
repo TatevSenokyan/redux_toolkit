@@ -144,6 +144,27 @@ img {
   box-sizing: border-box;
 }
 
+.add-btn {
+   margin-top: 25px;
+   border: none;
+   outline: none;
+   background: #483D8B;
+   color: white;
+   margin: 5px;
+   width: 130px;
+   cursor: pointer;
+   height: 40px;
+   border-radius: 10px;
+   font-size: 15px;
+   font-weight: 700;
+
+}
+
+.loading {
+  font-size: 28px;
+  font-weight: 700;
+}
+
 .empty {
   margin-top: 100px;
   font-weight: 700;
